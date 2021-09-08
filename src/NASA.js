@@ -11,7 +11,7 @@ export default function NASA(props){
             <h2>{title}</h2>
             <h3>{date}</h3>
             <div className = "image-container">
-                <img src = {url} alt = "This is NASA's POD"></img>
+                <img src = {url} alt = "This is NASA's POD" height = {500} ></img>
             </div>
             <p>{explanation}</p>
         </div>
