@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import axios from 'axios';
+import Header from './Header';
+import NASA from './NASA';
+import Footer from './Footer';
 
 function App() {
   const [nasaPic, setNasaPic] = useState([]);
@@ -12,13 +15,20 @@ function App() {
     }).catch( err => console.log(err));
   }, [])
 
+
   return (
-    <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+    <div className = "App">
+      <div className = "Header">
+        <Header />
+      </div>
+      <div className = "NASA">
+        <NASA nasaPic = {nasaPic} />
+      </div>
+      <div className = "Footer">
+        <Footer />
+      </div>
     </div>
+    
   );
 }
 
